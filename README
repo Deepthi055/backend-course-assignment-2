@@ -1,0 +1,98 @@
+🎯 Synergia Event Booking API – Assignment 2
+📘 Overview
+
+This project is a Node.js + Express.js REST API developed as part of Assignment 2 for managing event bookings for the Synergia Technical Event.
+The application connects to MongoDB for persistent data storage and implements CRUD operations for both events and bookings.
+
+🚀 Features
+
+✅ Connects Node.js API to MongoDB
+✅ Create, Read, Update, and Delete (CRUD) for Events and Bookings
+✅ Query bookings by ID or Email
+✅ Delete booking by Email
+✅ Fetch event details by ID or Title
+✅ Well-structured API responses with success/error messages
+
+🛠️ Technologies Used
+
+Node.js
+
+Express.js
+
+MongoDB Atlas
+
+Postman (for API testing)
+
+⚙️ Installation & Setup
+1. Clone the Repository
+git clone https://github.com/<your-username>/synergia-event-booking-api.git
+cd synergia-event-booking-api
+
+2. Install Dependencies
+npm install
+
+3. Configure MongoDB
+
+Create a .env file (or directly in code) and add your MongoDB URI:
+
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority
+PORT=9000
+
+4. Run the Server
+node index.js
+
+
+Server will start at:
+
+http://localhost:9000
+
+📡 API Endpoints
+🧾 Event Routes
+Method	Endpoint	Description
+POST	/api/events	Add a new event
+GET	/api/events	Fetch all events
+GET	/api/events/:id	Fetch event by ID
+DELETE	/api/events/:title	Delete event by title
+🎟️ Booking Routes
+Method	Endpoint	Description
+POST	/api/bookings	Add new booking
+GET	/api/bookings	Get all bookings
+GET	/api/bookings/:id	Get booking by ID
+PUT	/api/bookings	Update booking by email
+DELETE	/api/bookings	Delete booking by email
+🧠 Example Request Body
+Add Event
+{
+  "title": "Tech Innovators Summit",
+  "date": "2025-11-10",
+  "location": "Sahyadri College",
+  "description": "A national-level technical event"
+}
+
+Add Booking
+{
+  "name": "Deepthi",
+  "email": "deepthi@example.com",
+  "eventTitle": "Tech Innovators Summit"
+}
+
+Delete Booking by Email
+{
+  "email": "deepthi@example.com"
+}
+
+🧪 Testing Using Postman
+
+Open Postman and set your API base URL: http://localhost:9000
+
+Test endpoints one by one (use raw JSON in body)
+
+Check responses for success or error messages
+
+📁 Project Structure
+synergia-event-booking-api/
+│
+├── db.js           # Main server file
+├── package.json       # Dependencies and scripts
+├── README.md          # Project documentation
+└── node_modules/      # Installed dependencies

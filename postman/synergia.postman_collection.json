@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "4b42a799-0260-4a11-a64d-0e02fed51c8e",
+		"name": "synergia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40299889",
+		"_collection_link": "https://winter-eclipse-90706.postman.co/workspace/Postman-API-fundamentals-Expert~ae477d19-3902-4719-b650-b745b9f91fd0/collection/40299889-4b42a799-0260-4a11-a64d-0e02fed51c8e?action=share&source=collection_link&creator=40299889"
+	},
+	"item": [
+		{
+			"name": "get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Tech Symposium\",\r\n  \"desc\": \"AI and Robotics event\",\r\n  \"capacity\": 150,\r\n  \"date\": \"2025-11-10\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/events",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Tech Symposium\",\r\n  \"desc\": \"AI and Robotics event\",\r\n  \"capacity\": 150,\r\n  \"date\": \"2025-11-10\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{baseURL}}/events",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Tech Conference 2025\",\r\n  \"desc\": \"Updated Description\",\r\n  \"capacity\": 100,\r\n  \"date\": \"2025-11-03\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/put",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"put"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postbooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Deepthi\",\r\n  \"email\": \"deepthi@example.com\",\r\n  \"eventTitle\": \"Tech Fest 2025\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/bookings",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Tech Symposium\",\r\n  \"desc\": \"AI and Robotics event\",\r\n  \"capacity\": 150,\r\n  \"date\": \"2025-11-10\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/events/6905df5590bf97afab9d444b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"events",
+						"6905df5590bf97afab9d444b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "grtbooking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Deepthi\",\r\n  \"email\": \"deepthi@example.com\",\r\n  \"eventTitle\": \"Tech Fest 2025\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/bookings",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getbookbyid",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"deepthi@example.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/bookings",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "updatebooking",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"deepthi@example.com\",\r\n  \"name\": \"Deepthi K\",\r\n  \"eventTitle\": \"Updated AI Workshop\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/bookings",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
